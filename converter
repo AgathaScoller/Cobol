@@ -1,0 +1,13 @@
+       IDENTIFICATION DIVISION.
+       PROGRAM-ID. ConverterMetros.
+
+       DATA DIVISION.
+       WORKING-STORAGE SECTION.
+       01 VALOR        PIC 9(1)V99 VALUE 1.85.
+       01 VALOR-METRO  PIC 9(3)V99.
+
+       PROCEDURE DIVISION.
+       INICIO.
+           COMPUTE VALOR-METRO = VALOR * 100
+           DISPLAY VALOR-METRO
+           STOP RUN.
