@@ -1,0 +1,62 @@
+       IDENTIFICATION DIVISION.
+       PROGRAM-ID. LetraNumero.
+       AUTHOR. Agatha Cabral.
+       DATE-WRITTEN. 2025-09-09.
+
+       DATA DIVISION.
+       WORKING-STORAGE SECTION.
+
+       01 ALFABETO.
+           05 LETRA OCCURS 26 TIMES PIC X VALUE
+              "A" "B" "C" "D" "E" "F" "G" "H" "I" "J"
+              "K" "L" "M" "N" "O" "P" "Q" "R" "S" "T"
+              "U" "V" "W" "X" "Y" "Z".
+
+       01 ENTRADA         PIC X(10).
+       01 LETRA-UNICA     PIC X.
+       01 POSICAO         PIC 99.
+       01 NUMERO          PIC 99.
+       01 I               PIC 99.
+       01 SAIR-PROGRAMA   PIC X VALUE "N".
+
+       PROCEDURE DIVISION.
+       INICIO.
+           PERFORM UNTIL SAIR-PROGRAMA = "S"
+               DISPLAY "Digite uma letra (A-Z) ou número (1-26) ou 'SAIR' para encerrar: "
+               ACCEPT ENTRADA
+
+               IF FUNCTION UPPER-CASE(ENTRADA) = "SAIR"
+                   MOVE "S" TO SAIR-PROGRAMA
+                   DISPLAY "Encerrando programa..."
+               ELSE
+                   IF ENTRADA NUMERIC
+                       MOVE FUNCTION NUMVAL(ENTRADA) TO NUMERO
+                       IF NUMERO >= 1 AND NUMERO <= 26
+                           MOVE LETRA(NUMERO) TO LETRA-UNICA
+                           DISPLAY "O número " NUMERO " corresponde à letra '" LETRA-UNICA "'."
+                       ELSE
+                           DISPLAY "Número inexistente."
+                       END-IF
+                   ELSE
+                       IF FUNCTION LENGTH(ENTRADA) = 1
+                           MOVE FUNCTION UPPER-CASE(ENTRADA) TO LETRA-UNICA
+                           MOVE 0 TO POSICAO
+                           PERFORM VARYING I FROM 1 BY 1 UNTIL I > 26 OR POSICAO > 0
+                               IF LETRA(I) = LETRA-UNICA
+                                   MOVE I TO POSICAO
+                               END-IF
+                           END-PERFORM
+
+                           IF POSICAO > 0
+                               DISPLAY "A letra '" LETRA-UNICA "' é a " POSICAO "ª do alfabeto."
+                           ELSE
+                               DISPLAY "Letra inexistente."
+                           END-IF
+                       ELSE
+                           DISPLAY "Entrada inválida. Digite uma letra ou número válido."
+                       END-IF
+                   END-IF
+               END-IF
+           END-PERFORM
+
+           STOP RUN.
