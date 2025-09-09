@@ -1,6 +1,5 @@
        IDENTIFICATION DIVISION.
        PROGRAM-ID. LetraNumero.
-       AUTHOR. Agatha Cabral.
        DATE-WRITTEN. 2025-09-09.
 
        DATA DIVISION.
