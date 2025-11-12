@@ -1,6 +1,10 @@
-# COBOL
+# COBOL 🖥️
 
-Repository dedicated to the study and experimentation of COBOL programming.  
+![COBOL](https://img.shields.io/badge/COBOL-GnuCOBOL-blue?style=flat-square)
+![Environment](https://img.shields.io/badge/Environment-Linux%20%7C%20Windows-ff69b4?style=flat-square)
+![Editor](https://img.shields.io/badge/Editor-VS%20Code%20%7C%20Any%20IDE-9cf?style=flat-square)
+
+Repository dedicated to the **study and experimentation of COBOL programming**.  
 Focused on understanding legacy systems, structured programming logic, and data processing in enterprise environments.
 
 ---
@@ -15,7 +19,7 @@ Focused on understanding legacy systems, structured programming logic, and data 
 
 ---
 
-## OBJECTIVES
+##  OBJECTIVES
 
 - Explore COBOL as a foundational language for business and financial systems  
 - Understand data division, record management, and procedural structure  
@@ -34,6 +38,6 @@ Focused on understanding legacy systems, structured programming logic, and data 
 
 ## CODE STYLE
 
-Code prioritizes readability and strict structural organization.  
-Comments are used to document logic flow and data handling.  
-Programs follow standard COBOL division formatting: Identification, Environment, Data, and Procedure.  
+- Code prioritizes **readability** and strict structural organization  
+- Comments document logic flow and data handling  
+- Programs follow standard COBOL division formatting: **Identification, Environment, Data, Procedure**
