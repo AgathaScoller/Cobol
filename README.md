@@ -1,4 +1,4 @@
-# COBOL 🖥️
+# COBOL 
 
 ![COBOL](https://img.shields.io/badge/COBOL-GnuCOBOL-blue?style=flat-square)
 ![Environment](https://img.shields.io/badge/Environment-Linux%20%7C%20Windows-ff69b4?style=flat-square)
